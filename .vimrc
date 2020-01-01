@@ -18,6 +18,6 @@ execute "set rtp+=" . g:opamshare . "/merlin/vim"
 vmap '' :w !pbcopy<cr><cr>
 colorscheme elflord
 set autowrite
-nnoremap <c-b> :!g++ -std=c++11 % -wall -g -o %.out && ./%.out<cr>
-set clipboard=unnamedplus
+nnoremap <c-b> :!g++ -std=c++11 % -Wall -g -o %.out && ./%.out<cr>
 se mouse+=a
+set relativenumber
