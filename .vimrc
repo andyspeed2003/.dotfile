@@ -14,10 +14,10 @@ set incsearch
 set visualbell
 set noerrorbells
 let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-execute "set rtp+=" . g:opamshare . "/merlin/vim"
-vmap '' :w !pbcopy<cr><cr>
 colorscheme elflord
 set autowrite
 nnoremap <c-b> :!g++ -std=c++11 % -Wall -g -o %.out && ./%.out<cr>
 se mouse+=a
-set relativenumber
+set number
+vmap <C-c> "+y
+nmap <C-v> "+p
