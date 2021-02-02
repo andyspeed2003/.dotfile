@@ -27,3 +27,9 @@ se mouse+=a
 set number
 vmap <C-c> "+y
 nmap <C-v> "+p
+if executable(s:clip)
+    augroup WSLYank
+        autocmd!
+        autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+    augroup END
+endif
